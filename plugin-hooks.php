@@ -1,6 +1,5 @@
 <?php
 
-use App\Helpers\ScriptsManager;
 use App\Helpers\UserNotices;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schema;
@@ -54,7 +53,7 @@ add_action( 'contentpress/admin/sidebar/menu', function () {
                 <li>
                     <a class="treeview-item <?php App\Helpers\MenuHelper::activateSubmenuItem( 'admin.cp_links.all' ); ?>"
                        href="<?php esc_attr_e( route( 'admin.cp_links.all' ) ); ?>">
-                        <?php esc_html_e( __( 'npfr::m.Manage' ) ); ?>
+                        <?php esc_html_e( __( 'cpl::m.Manage' ) ); ?>
                     </a>
                 </li>
                 <?php do_action( 'contentpress/admin/sidebar/menu/cp_links' ); ?>
@@ -68,6 +67,6 @@ add_action( 'contentpress/admin/sidebar/menu', function () {
  * Register the path to the translation file that will be used depending on the current locale
  */
 add_action( 'contentpress/app/loaded', function () {
-    cp_register_language_file( 'npfr', path_combine( CPL_PLUGIN_DIR_PATH, 'lang' ) );
+    cp_register_language_file( 'cpl', path_combine( CPL_PLUGIN_DIR_PATH, 'lang' ) );
 } );
 

@@ -23,4 +23,5 @@ return [
     "Are you sure you want to delete this link?" => "Are you sure you want to delete this link?",
     "Delete" => "Delete",
     "No links found. Why not create one?" => "No links found. Why not create one?",
+    "Manage" => "Manage",
 ];
