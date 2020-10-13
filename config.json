@@ -1,0 +1,17 @@
+{
+    "name": "cp-links",
+    "display_name": "ContentPress Links",
+    "description": "This plugin allows you to manage your links to friend websites.",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "wp-kitten",
+            "url": "https://wp-kitten.github.io"
+        }
+    ],
+    "contributors": [],
+    "page_url": "https://github.com/wp-kitten/cp-links",
+    "update_url": "http://api.contentpress.news/api/plugin/info/cp-links",
+    "autoload": "index.php",
+    "thumbnail": "thumb.png"
+}
