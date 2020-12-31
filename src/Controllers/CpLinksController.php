@@ -9,7 +9,7 @@ class CpLinksController extends AdminControllerBase
 {
     public function index()
     {
-        if ( !cp_current_user_can( 'manage_options' ) ) {
+        if ( !vp_current_user_can( 'manage_options' ) ) {
             return redirect()->back()->with( 'message', [
                 'class' => 'danger', // success or danger on error
                 'text' => __( 'cpl::m.You are not allowed to perform this action.' ),
@@ -23,7 +23,7 @@ class CpLinksController extends AdminControllerBase
 
     public function showEditPage( $id )
     {
-        if ( !cp_current_user_can( 'manage_options' ) ) {
+        if ( !vp_current_user_can( 'manage_options' ) ) {
             return $this->_forbidden();
         }
 
@@ -34,7 +34,7 @@ class CpLinksController extends AdminControllerBase
 
     public function __insert()
     {
-        if ( !cp_current_user_can( 'manage_options' ) ) {
+        if ( !vp_current_user_can( 'manage_options' ) ) {
             return redirect()->back()->with( 'message', [
                 'class' => 'danger', // success or danger on error
                 'text' => __( 'cpl::m.You are not allowed to perform this action.' ),
@@ -77,7 +77,7 @@ class CpLinksController extends AdminControllerBase
 
     public function __update( $id )
     {
-        if ( !cp_current_user_can( 'manage_options' ) ) {
+        if ( !vp_current_user_can( 'manage_options' ) ) {
             return redirect()->back()->with( 'message', [
                 'class' => 'danger', // success or danger on error
                 'text' => __( 'cpl::m.You are not allowed to perform this action.' ),
@@ -137,7 +137,7 @@ class CpLinksController extends AdminControllerBase
 
     public function __delete( $id )
     {
-        if ( !cp_current_user_can( 'manage_options' ) ) {
+        if ( !vp_current_user_can( 'manage_options' ) ) {
             return redirect()->back()->with( 'message', [
                 'class' => 'danger', // success or danger on error
                 'text' => __( 'cpl::m.You are not allowed to perform this action.' ),

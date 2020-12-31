@@ -11,10 +11,10 @@
             <div>
                 <h1>{{__('cpl::m.Edit link')}}</h1>
             </div>
-            @if(cp_current_user_can('manage_options'))
+            @if(vp_current_user_can('manage_options'))
                 <ul class="list-unstyled list-inline mb-0">
                     <li class="">
-                        <a href="{{route('admin.cp_links.all')}}" class="btn btn-primary">{{__('cpl::m.Back')}}</a>
+                        <a href="{{route('admin.vp_links.all')}}" class="btn btn-primary">{{__('cpl::m.Back')}}</a>
                     </li>
                 </ul>
             @endif
@@ -23,13 +23,13 @@
 
     @include('admin.partials.notices')
 
-    @if(cp_current_user_can('manage_options'))
+    @if(vp_current_user_can('manage_options'))
         <div class="row">
             <div class="col-md-4">
                 <div class="tile">
                     <h3 class="tile-title">{{__('cpl::m.Edit')}}</h3>
 
-                    <form method="post" action="{{route('admin.cp_links.update', $link->id)}}">
+                    <form method="post" action="{{route('admin.vp_links.update', $link->id)}}">
                         <div class="form-group">
                             <label for="link-title-field">{{__('cpl::m.Title')}}</label>
                             <input type="text" class="form-control" value="{{$link->title}}" name="title" id="link-title-field"/>

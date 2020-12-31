@@ -1,8 +1,8 @@
 {
-    "name": "cp-links",
-    "display_name": "ContentPress Links",
+    "name": "valpress-links",
+    "display_name": "ValPress Links",
     "description": "This plugin allows you to manage your links to friend websites.",
-    "version": "0.1",
+    "version": "1.0",
     "authors": [
         {
             "name": "wp-kitten",
@@ -10,8 +10,8 @@
         }
     ],
     "contributors": [],
-    "page_url": "https://github.com/wp-kitten/cp-links",
-    "update_url": "http://api.contentpress.news/api/plugin/info/cp-links",
+    "page_url": "https://github.com/wp-kitten/valpress-links",
+    "update_url": "http://api.valpress.net/api/plugin/info/valpress-links",
     "autoload": "index.php",
     "thumbnail": "thumb.png"
 }

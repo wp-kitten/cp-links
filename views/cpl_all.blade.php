@@ -16,13 +16,13 @@
 
     @include('admin.partials.notices')
 
-    @if(cp_current_user_can('manage_options'))
+    @if(vp_current_user_can('manage_options'))
         <div class="row">
             <div class="col-md-4">
                 <div class="tile">
                     <h3 class="tile-title">{{__('cpl::m.Add new')}}</h3>
 
-                    <form method="post" action="{{route('admin.cp_links.create', ['id' => request('id')])}}">
+                    <form method="post" action="{{route('admin.vp_links.create', ['id' => request('id')])}}">
                         <div class="form-group">
                             <label for="link-title-field">{{__('cpl::m.Title')}}</label>
                             <input type="text" class="form-control" value="" name="title" id="link-title-field"/>
@@ -54,14 +54,14 @@
                                         <span class="d-block text-description">{{$link->url}}</span>
                                     </p>
                                     <div>
-                                        <a href="{{route('admin.cp_links.edit', ['id' => $link->id])}}" class="mr-2">{{__('cpl::m.Edit')}}</a>
+                                        <a href="{{route('admin.vp_links.edit', ['id' => $link->id])}}" class="mr-2">{{__('cpl::m.Edit')}}</a>
                                         <a href="#"
                                            class="text-danger"
                                            data-confirm="{{__('cpl::m.Are you sure you want to delete this link?')}}"
                                            data-form-id="form-link-delete-{{$link->id}}">
                                             {{__('cpl::m.Delete')}}
                                         </a>
-                                        <form id="form-link-delete-{{$link->id}}" action="{{route('admin.cp_links.delete', $link->id)}}" method="post" class="hidden">
+                                        <form id="form-link-delete-{{$link->id}}" action="{{route('admin.vp_links.delete', $link->id)}}" method="post" class="hidden">
                                             @csrf
                                         </form>
                                     </div>

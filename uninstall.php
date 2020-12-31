@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 require_once( dirname( __FILE__ ) . '/index.php' );
 
-add_action( 'contentpress/plugin/deleted', function ( $pluginDirName ) {
+add_action( 'valpress/plugin/deleted', function ( $pluginDirName ) {
     if ( CPL_PLUGIN_DIR_NAME == $pluginDirName ) {
         //#! Drop table
         if ( Schema::hasTable( 'links' ) ) {
